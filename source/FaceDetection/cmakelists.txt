@@ -1,0 +1,19 @@
+# CMakeLists for FaceDetection directory
+PROJECT(FaceNix)
+SET(HEADER_FILE ../../include)
+SET(FaceDetection_SRCS fxHaarTrain.c
+${HEADER_FILE}/Haar.h
+${HEADER_FILE}/AdaBoost.h
+)
+
+# shared library
+ADD_LIBRARY(FaceDetection SHARED ${FaceDetection_SRCS})
+
+# static library
+ADD_LIBRARY(FaceDetection STATIC ${FaceDetection_SRCS})
+
+TARGET_LINK_LIBRARIES(FaceDetection Base ImageProcessing ML Error)
+
+
+SET_TARGET_PROPERTIES(FaceDetection PROPERTIES OUTPUT_NAME "FaceDetection")
+SET_TARGET_PROPERTIES(FaceDetection PROPERTIES CLEAN_DIRECT_OUTPUT 1)

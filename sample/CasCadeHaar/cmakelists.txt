@@ -1,0 +1,5 @@
+INCLUDE_DIRECTORIES(
+  ${PROJECT_SOURCE_DIR}/include
+)
+ADD_EXECUTABLE(CasCadeHaar main.c)
+TARGET_LINK_LIBRARIES(CasCadeHaar Base FaceDetection ImageProcessing ML Error ${OpenCV_LIBS})

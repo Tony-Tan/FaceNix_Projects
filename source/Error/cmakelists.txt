@@ -1,0 +1,15 @@
+# CMakeLists for Error directory
+PROJECT(FaceNix)
+SET(HEADER_FILE ../../include)
+SET(Error_SRCS fxError.c
+${HEADER_FILE}/fxError.h
+)
+
+# shared library
+ADD_LIBRARY(Error SHARED ${Error_SRCS})
+
+# static library
+ADD_LIBRARY(Error STATIC ${Error_SRCS})
+
+SET_TARGET_PROPERTIES(Error PROPERTIES OUTPUT_NAME "Error")
+SET_TARGET_PROPERTIES(Error PROPERTIES CLEAN_DIRECT_OUTPUT 1)

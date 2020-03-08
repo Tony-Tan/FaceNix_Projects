@@ -1,0 +1,31 @@
+FIND_PACKAGE( OpenMP REQUIRED)
+if(OPENMP_FOUND)
+message("OPENMP FOUND")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
+endif()
+
+INCLUDE_DIRECTORIES(
+  ${PROJECT_SOURCE_DIR}/include
+)
+ADD_EXECUTABLE(FA3000_train
+fa3000.h
+faType.h
+faGlobal.c
+faGlobal.h
+faLBF.c
+faLBF.h
+faLocal.c
+faLocal.h
+faRead.c
+faRead.h
+faSave.c
+faSave.h
+faTrain.c
+faTrain.h
+main.c
+faSID.c
+faSID.h
+)
+TARGET_LINK_LIBRARIES(FA3000_train Base Error ImageProcessing ${PROJECT_SOURCE_DIR}/../3rdpart/liblinear.lib)

@@ -1,0 +1,15 @@
+
+# the source CMakeLists.txt for project FaceNix
+
+
+PROJECT(FaceNix)
+ADD_SUBDIRECTORY(Error)
+ADD_SUBDIRECTORY(Base)
+ADD_SUBDIRECTORY(Math)
+ADD_SUBDIRECTORY(ImageProcessing)
+ADD_SUBDIRECTORY(ML)
+ADD_SUBDIRECTORY(ANN)
+ADD_SUBDIRECTORY(DeepLearning)
+ADD_SUBDIRECTORY(FaceDetection)
+ADD_SUBDIRECTORY(FaceRecognation)
+ADD_SUBDIRECTORY(FaceAlignment)

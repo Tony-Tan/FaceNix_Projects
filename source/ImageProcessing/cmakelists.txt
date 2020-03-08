@@ -1,0 +1,20 @@
+# CMakeLists for ImageProcessing directory
+PROJECT(FaceNix)
+SET(HEADER_FILE ../../include)
+SET(ImageProcessing_SRCS fxHaar.c fxResize.c
+${HEADER_FILE}/Haar.h 
+${HEADER_FILE}/fxDIP.h
+fxDIP__.h
+)
+
+# shared library
+ADD_LIBRARY(ImageProcessing SHARED ${ImageProcessing_SRCS})
+
+# static library
+ADD_LIBRARY(ImageProcessing STATIC ${ImageProcessing_SRCS})
+
+
+TARGET_LINK_LIBRARIES(ImageProcessing Base  Error )
+SET_TARGET_PROPERTIES(ImageProcessing PROPERTIES OUTPUT_NAME "ImageProcessing")
+SET_TARGET_PROPERTIES(ImageProcessing PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+

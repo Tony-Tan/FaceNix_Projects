@@ -1,0 +1,15 @@
+project(FA3000_Transform)
+
+INCLUDE_DIRECTORIES(
+  ${PROJECT_SOURCE_DIR}/include
+)
+ADD_EXECUTABLE(FA3000_Transform
+fa3000trans.h
+faRead.c
+faRead.h
+faWrite.c
+faWrite.h
+faType.h
+main.c
+)
+TARGET_LINK_LIBRARIES(FA3000_Transform Base Error ImageProcessing )

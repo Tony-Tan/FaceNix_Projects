@@ -1,0 +1,10 @@
+# the sample CMakeLists.txt for project ttiger
+
+PROJECT(FaceNix)
+ADD_SUBDIRECTORY(CasCadeHaar)
+ADD_SUBDIRECTORY(JCDA_train)
+ADD_SUBDIRECTORY(JCDA_test)
+ADD_SUBDIRECTORY(FA3000_train)
+ADD_SUBDIRECTORY(FA3000_test)
+ADD_SUBDIRECTORY(FA3000_data_transform)
+ADD_SUBDIRECTORY(FA3000_unit_test)

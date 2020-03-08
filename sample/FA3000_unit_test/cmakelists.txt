@@ -1,0 +1,7 @@
+INCLUDE_DIRECTORIES(
+  ${PROJECT_SOURCE_DIR}/include
+)
+ADD_EXECUTABLE(FA3000_Unit
+main.cpp
+)
+TARGET_LINK_LIBRARIES(FA3000_Unit Base Error ImageProcessing FxALib ${PROJECT_SOURCE_DIR}/../3rdpart/liblinear.lib)
